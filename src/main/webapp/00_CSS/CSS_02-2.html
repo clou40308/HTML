@@ -4,12 +4,39 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>CSS Example--大小</title>
 		<style type="text/css">
-		
+		body {
+			margin: 0px;
+		}
+		.testdiv{
+			background: pink;
+			height: 400px;
+			width: 500px;
+			width: 80%;
+			margin: auto;
+		}
+		img{
+			/* height: 300px; */
+			width: 120px;
+			width: 30%;
+
+			max-width: 250px;
+			min-width: 200px;
+
+			/* max-width: 200px;
+			min-width: 170px; */
+
+		}
+		div img{
+			width: 50%;
+		}
 		</style>
 	</head>
 	<body>
-		<div class="testdiv">
-			<img src="images/adv1.jpg"/>
+		<div class="testdiv" id="aa">
+			<img id="bb" src="images/adv1.jpg"/>
+			<!-- <img src="../04/images/00034a.jpg" >
+			<img src="https://www.petstock.com.au/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0376%2F6478%2F4520%2Ffiles%2F100000135001-Doggylicious-Barkin-Bacon-Doggy-Peanut-Butter-250g-01.png%3Fv%3D1712538448&w=256&q=75" > -->
 		</div>
+		<img src="images/adv1.jpg"/>
 	</body>
 </html>

@@ -7,17 +7,21 @@
 	<title>CSS Selector</title>
 	<link rel="stylesheet" href="link.css" type="text/css">
 	<style type="text/css">
-		/* CSS: Cacading Style Sheets */
+		/* CSS: Cascading Style Sheets */
 		@import url(import.css);
+
 		span {
-			color: orange;
+			color: orange
+				/*!important;*/
 		}
-		/* class> type >inherit */
+
+		/* 優先度: inline > id > class> type > inherit */
 	</style>
 </head>
 
 <body>
-	<span class="myClass" id="myId">This is a span!</span>
+	<span class="myClass" id="myId" style="color: lightseagreen;">This is a span!</span>
+	
 </body>
 
 </html>
