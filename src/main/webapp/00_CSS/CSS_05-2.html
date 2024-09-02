@@ -1,20 +1,89 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>CSS Font</title>
 	<style type="text/css">
-	
+		body {
+			margin: 0px;
+		}
+
+		.example {
+			background-color: silver;
+			width: 500px;
+			margin: 0px auto 0px auto;
+			margin: 0px auto;
+			margin: 0 auto;
+			margin: auto;
+			margin: 400px auto;
+
+			position: static;
+			position: relative;
+			
+			left: 0px;
+			top: 0px;
+		}
+
+		h1 {
+			color: red;
+			background-color: pink;
+			font-size: 5em;
+			margin: 0px;
+		}
+
+		.font1 {
+			color: green;
+			background-color: lightgreen;
+			margin: 10px;
+			margin: 10px 30px;
+			margin: 10px 30px 40px 30px;
+			margin: 0px;
+			margin: 0px 0px 0px 0px;
+			
+			position: fixed;
+			position: relative;
+			position: static;
+			position: absolute;
+			
+			left: 40px;
+			top: 25px;
+
+			z-index: 5;
+		}
+
+		.font2 {
+			color: blue;
+			background-color: lightblue;
+			margin: 20px 0px 0px 0px;
+			margin: 0px;
+			
+			position: static;
+			position: absolute;
+			
+			left: 60px;
+			top: 45px;
+			
+			z-index: 1;
+		}
 	</style>
 </head>
 
 <body>
 	<div class="example">
-	  <h1>Sport</h1>
-	  <div>
-		<p class="font1"> Now, this is very much a he-snapped/he-snapped situation; it's easy to see Daly's side of things here. You play like garbage, the last thing you want to deal with is some Aussie paparazzi-wannabe shoving his little digital camera in your face. "I was looking to take a drop and a camera was 6 inches away from my face," Daly said in a statement after the round. </p>
-		<p class="font2"> We don't go out of our way to find stories that make John Daly look bad. Really, I swear. They just kind of drop in our laps, like this newest one: in Australia on Thursday, Daly didn't exactly take kindly to being photographed. Daly, finishing out an ugly 6-over 78 at the Australian Open that likely took him out of cut contention, grabbed the guy's camera and smashed it into a tree. </p>
-	  </div>
+		<h1>Sport</h1>
+		<div>
+			<p class="font1"> Font1! Now, this is very much a he-snapped/he-snapped situation; it's easy to see Daly's
+				side of things here. You play like garbage, the last thing you want to deal with is some Aussie
+				paparazzi-wannabe shoving his little digital camera in your face. "I was looking to take a drop and a
+				camera was 6 inches away from my face," Daly said in a statement after the round. </p>
+			<p class="font2"> Font2! We don't go out of our way to find stories that make John Daly look bad. Really, I
+				swear. They just kind of drop in our laps, like this newest one: in Australia on Thursday, Daly didn't
+				exactly take kindly to being photographed. Daly, finishing out an ugly 6-over 78 at the Australian Open
+				that likely took him out of cut contention, grabbed the guy's camera and smashed it into a tree. </p>
+		</div>
 	</div>
 </body>
+
 </html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0057)http://10.0.1.21:5050/webapp/00_JavaScript/04_number.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>JavaScript</title>
+	<style type="text/css">
+		span{
+			/*color: #88aa00;
+			color: #ffffff;
+			color: #808080;*/
+			color: #000000;
+		}
+	</style>
+	<script type="text/javascript">
+		var a = 1;//number
+		a = 3.3;//number
+		a = -3.3;//number
+		
+		//a = "3.3";//string
+		a = Number("3.3");//number 3.3 
+		a = Number("3.3px");//number NaN:Not a Number 
+		a = Number("abc3.3");//number NaN:Not a Number 
+		a = Number(" 3.3 ");//number 3.3
+		a = Number("");//number 0
+		a = Number("    ");//number 0
+		a = Number(true);//number 1
+		a = Number(false);//number 0
+		a = Number(null);//number 0
+		a = Number(undefined);//number NaN:Not a Number 
+		
+		a = parseFloat("3.3");//number 3.3 
+		a = parseFloat("3.3px");//number 3.3
+		a = parseFloat("abc3.3");//number NaN:Not a Number 
+		a = parseFloat(" 3.3 ");//number 3.3
+		a = parseFloat("");//number NaN:Not a Number 
+		a = parseFloat("    ");//number NaN:Not a Number 
+		a = parseFloat(true);//number NaN:Not a Number 
+		a = parseFloat(false);//number NaN:Not a Number 
+		a = parseFloat(null);//number NaN:Not a Number 
+		a = parseFloat(undefined);//number NaN:Not a Number 
+		
+		a = parseInt("3.3");//number 3
+		a = parseInt("3.3px");//number 3
+		a = parseInt("abc3.3");//number NaN:Not a Number 
+		a = parseInt(" 3.3 ");//number 3
+		a = parseInt("");//number NaN:Not a Number 
+		a = parseInt("    ");//number NaN:Not a Number 
+		a = parseInt(true);//number NaN:Not a Number 
+		a = parseInt(false);//number NaN:Not a Number 
+		a = parseInt(null);//number NaN:Not a Number 
+		a = parseInt(undefined);//number NaN:Not a Number 
+		
+		a = 31;//31  	10
+		a = 031;//25	8
+		a = 0x31;//49	16
+		
+		a = 0X00fF00;//65280
+		a = 65535-255;//65280
+		//document.write("a="+typeof(a)+"<br>");
+		//document.write("a="+a+"<br>");
+		
+		var b;//undefined
+		//b = 2;
+		//document.write("b="+b+"<br>");
+		
+		//var s1 = document.getElementById("s1");//null
+		//document.write("s1="+s1+"<br>");
+	</script>
+</head>
+
+<body>
+<!--span>Hello</span 
+5+2=?<br> -->
+
+<span id="s1">5</span>+<span id="s2">2</span>=<span id="s3">?</span><br>
+<span id="s4">5</span>-<span id="s5">2</span>=<span id="s6">?</span><br>
+<script type="text/javascript">
+//var s1 = document.getElementById("s1");//HTMLSpanElement <span id="s1">5</span>
+var s1 = document.getElementById("s1").innerHTML;//"5"
+var s2 = document.getElementById("s2").innerHTML;//"2"
+document.getElementById("s3").innerHTML = Number(s1) + Number(s2);//"5"+"2"=>"52"
+//document.write("s2="+typeof(s2)+"<br>");//string
+
+var s4 = document.getElementById("s4").innerHTML;//"5"
+var s5 = document.getElementById("s5").innerHTML;//"2"
+//document.getElementById("s6").innerHTML = Number(s4) - Number(s5);
+document.getElementById("s6").innerHTML = s4-s5;//"5"-"2"=>Number("5")-Number("2")=>3
+
+</script>
+
+</body>
+
+</html>
