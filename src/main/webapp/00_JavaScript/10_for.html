@@ -1,0 +1,168 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0054)http://10.0.1.21:5050/webapp/00_JavaScript/10_for.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>JavaScript</title>
+	<script type="text/javascript">
+		//for (var i=0; i<3; i++) document.write("Hello"+"<br>");
+		/*for (var i=0; i<3; i++){
+			document.write("Hello"+"<br>");
+		}
+		
+		for (var i=0; i<3; i++){
+			document.write("i="+i+"<br>");
+		}
+		
+		for (var i=0; i<=10; i+=2){
+			document.write("i="+i+"<br>");
+		}
+		for (var i=1; i<=256; i*=2){
+			document.write("i="+i+"<br>");
+		}
+		for (var i=10; i>=0; i--){
+			document.write("i="+i+"<br>");
+		}*/
+
+		/*
+		var num = 3;
+		var sum = 0;
+		for (var i=1; i<=num; i++){
+			sum += i;
+			if(i<num){
+				document.write(i+"+");
+			}else{
+				document.write(i+"=");
+			}
+		}
+		document.write(sum+"<br>");//940 ms
+		*/
+		/*
+		var num = 3;
+		var sum = 0;
+		var str="";
+		for (var i=1; i<=num; i++){
+			sum += i;
+			str += i + "+";
+		}
+		str = str.slice(0,str.length-1);
+		document.write(str+"="+sum+"<br>");//12 ms 
+		*/
+		/*
+		var num = 3;
+		var sum = 0;
+		var str="";
+		for (var i=1; i<num; i++){
+			sum += i;
+			str += i + "+";
+		}
+		document.write(str+i+"="+(sum+i)+"<br>");//11ms
+		*/
+		/*
+		var i = 9;
+		for (var i=0; i<2; i++){
+			document.write("i="+i+"<br>");
+		}
+		document.write("end i="+i+"<br>");//2
+		*/
+		//1+2+3=6
+
+		//for loop
+		/*
+		var num = 4;
+		for (var i=1; i<=num; i++){
+			for(var j=1; j<=num; j++){
+				document.write("i="+i+" j="+j+"<br>");		
+			}
+		}*/
+		/*	
+			document.write("<div>");		
+			var num = 9;
+			for (var i=1; i<=num; i++){
+				for(var j=1; j<=num; j++){
+					document.write(i+"x"+j+"=");	
+					if(i*j < 10) document.write(" ");
+					document.write(i*j+"\t");		
+				}
+				document.write("<br>");		
+			}
+			document.write("</div>");	
+			*/
+		/*
+		var str = "";
+		str+="<div>";		
+		var num = 9;
+		for (var i=1; i<=num; i++){
+			for(var j=1; j<=num; j++){
+				str+=i+"x"+j+"=";	
+				if(i*j < 10) str+=" ";
+				str+=i*j+"\t";		
+			}
+			str+="<br>";		
+		}
+		str+="</div>";	
+		document.write(str);
+		*/
+
+		var num = 9;
+		document.write("<table>");
+		for (var i = 1; i <= num; i++) {
+			if (i % 2 == 1) {
+				document.write("<tr class='tr1'>");
+			} else {
+				document.write("<tr class='tr2'>");
+			}
+			for (var j = 1; j <= num; j++) {
+				document.write("<td>" + i + "x" + j + "=");
+				if (i * j < 10) document.write(" ");
+				document.write(i * j + "</td>");
+			}
+			document.write("</tr>");
+		}
+		document.write("</table>");	
+	</script>
+
+	<style type="text/css">
+		div {
+			white-space: pre;
+		}
+
+		table {
+			border: 2px solid gray;
+			border-collapse: collapse;
+			width: 600px;
+		}
+
+		.tr1 {
+			background: pink;
+		}
+
+		.tr2 {
+			background: silver;
+		}
+
+		tr:hover {
+			background: yellow;
+		}
+
+		td {
+			border: 1px solid gray;
+			height: 30px;
+			text-align: center;
+			vertical-align: middle;
+			cursor: cell;
+		}
+
+		td:hover {
+			background: orange;
+		}
+	</style>
+
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0055)http://10.0.1.21:5050/webapp/00_JavaScript/05_Math.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>JavaScript</title>
+	<style type="text/css">
+	</style>
+	<script type="text/javascript">
+		var a = 1;//number
+		a = 1+2*3-4;//3
+		a = 1+(2*3)-4;//3
+		
+		a = Math.abs(4);//4
+		a = Math.abs(-4);//4
+		
+		a = Math.sqrt(9);//3
+		a = Math.sqrt(16);//4
+		
+		a = Math.pow(3,2);//9
+		a = Math.pow(2,3);//8
+		
+		a = Math.random();//0 <= ? < 1
+		a = Math.random()*10;//0*10 <= ? < 1*10
+				
+		a = Math.round(3.4);//3
+		a = Math.round(3.6);//4
+		a = Math.round(3.6437*100)/100;//3.64
+
+		a = Math.ceil(3.4);//4
+		a = Math.ceil(3.7);//4
+		a = Math.ceil(3.6437*100)/100;//3.65
+
+		a = Math.floor(3.4);//3
+		a = Math.floor(3.7);//3
+		a = Math.floor(3.6437*100)/100;//3.64
+		
+		a = Math.max(3,2,5,1);//5
+		a = Math.min(3,2,5,1);//1
+
+		a = Math.PI;//3.141592653589793
+		//a = Math.sin(45);//NO 0.8509035245341184
+		a = Math.sin(Math.PI/4);//0.7071067811865475
+		var deg = 45;
+		a = Math.sin(Math.PI/180*deg);
+		
+		document.write("a="+a+"<br>");
+		
+		/*document.write(Math.floor(3.6)+"<br>");//3
+		document.write(parseInt(3.6)+"<br>");//3
+		document.write(Math.floor(-3.6)+"<br>");//-4
+		document.write(parseInt(-3.6)+"<br>");//-3*/
+
+		var sec = -83;
+		document.write(parseInt(sec/60)+":"+(sec%60)+"<br>");
+		document.write(parseInt(sec/60)+":"+Math.abs(sec%60)+"<br>");
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

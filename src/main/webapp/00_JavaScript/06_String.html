@@ -1,0 +1,60 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0057)http://10.0.1.21:5050/webapp/00_JavaScript/06_String.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>JavaScript</title>
+	<style type="text/css">
+	</style>
+	<script type="text/javascript">
+		var a = "Hello";//string
+		a = 'world!';//string
+		a = "Hello" + ' world!';
+		a = "Tony's book.";
+		a = "Tony\'s book which is \"The king\".";
+		a = "abc\tdef\nxyz";//\t: tab  \n:new line
+		//alert("abc<br>xyz");//abc<br>xyz
+		//alert("abc\nxyz");
+
+		//a = 3.5;//number
+		a = String(3.5);//"3.5"
+		a = String(true);//"true"
+
+		var b = 3.5;//number
+		a = b.toString();//"3.5"
+
+		a = "abcdefg";
+		document.write("a=" + typeof (a) + "<br>");
+		document.write("a=" + a + "<br>");
+		document.write("a=" + a.length + "<br>");//7
+		document.write("a=" + a.charAt(2) + "<br>");//c
+		document.write("a=" + a.slice(2, 5) + "<br>");//cde
+		//slice(startNumber:included, endNumber:not included)
+		//a = a.slice(2,5);
+		document.write("a=" + a + "<br>");
+		document.write("a=" + a.indexOf("b") + "<br>");//1
+		document.write("a=" + a.indexOf("b", 0) + "<br>");//1
+		document.write("a=" + a.indexOf("b", 1) + "<br>");//1
+		document.write("a=" + a.indexOf("b", 2) + "<br>");//-1
+
+		document.write("a=" + a.indexOf("cd") + "<br>");//2
+		a = "abCDef";
+		document.write("a=" + a + "<br>");
+		document.write("a=" + a.toLowerCase() + "<br>");//abcdef
+		document.write("a=" + a.toUpperCase() + "<br>");//ABCDEF
+		document.write("a=" + a + "<br>");
+
+		document.write("a=" + a.indexOf("bc") + "<br>");//-1
+		document.write("a=" + a.toLowerCase().indexOf("bc") + "<br>");//1
+		document.write("a=" + a.toLowerCase().indexOf("Bc") + "<br>");//-1
+		document.write("a=" + a.toLowerCase().indexOf("Bc".toLowerCase()) + "<br>");//1
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

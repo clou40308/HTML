@@ -1,0 +1,127 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0053)http://10.0.1.21:5050/webapp/00_JavaScript/09_if.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>JavaScript</title>
+	<style type="text/css">
+	</style>
+<script type="text/javascript">
+	//if(true) document.write("True"+"<br>");
+	/*
+	if(true){
+		document.write("True"+"<br>");
+	}
+	
+	if(true){
+		document.write("True"+"<br>");
+	}else{
+		document.write("False"+"<br>");
+	}
+
+	var rain = false;
+	var sunny = false;
+	var mood = false;
+	if(rain){
+		if(mood){
+			document.write("在家聽音樂"+"<br>");			
+		}else{
+			document.write("在家看喜劇"+"<br>");			
+		}
+	}else{
+		if(sunny){
+			document.write("出門去爬山"+"<br>");		
+		}else{
+			document.write("出門去逛街"+"<br>");		
+		}
+	}
+	*/
+	
+	var point = 45;
+	if(point >=90){
+		document.write("A"+"<br>");		
+	}else {
+		if(point >=80){
+			document.write("B"+"<br>");		
+		}else{
+			if(point >=70){
+				document.write("C"+"<br>");	
+			}else{
+				if(point >=60){
+					document.write("D"+"<br>");	
+				}else{
+					document.write("Fail!"+"<br>");		
+				}
+			}
+		}
+	}
+	
+	/*
+	var point = 45;
+	if(point >=90){
+		document.write("A"+"<br>");		
+	}else if(point >=80){
+		document.write("B"+"<br>");		
+	}else if(point >=70){
+		document.write("C"+"<br>");		
+	}else if(point >=60){
+		document.write("D"+"<br>");		
+	}else{
+		document.write("Fail!"+"<br>");		
+	}
+	*/
+	//window.alert("Alert!");
+	//alert("Alert!");
+	
+	//confirm("Confirm!");
+	//window.confirm("Confirm!");
+	//var ans = confirm("Confirm!");
+	//document.write("ans="+ans+"<br>");
+	
+	//prompt("Prompt!");
+	//window.prompt("Prompt!","Hello");
+	//var ans =prompt("Prompt!");
+	//document.write("ans="+ans+"<br>");
+	
+	//alert(Math.floor(NaN));//NaN
+	
+	/*
+	var year = prompt("Please input an year!");//string "4"
+	document.write("year="+year+"<br>");
+	if(year>0 && year==Math.floor(year)){
+		if (year%4==0 && year%100!=0 || year%400==0 && year%4000!=0){
+			document.write("閏年"+"<br>");
+		}else{
+			document.write("平年"+"<br>");
+		}
+	}else{
+		document.write("錯誤"+"<br>");
+	}
+	*/
+	//錯誤
+	
+	//0			year>0
+	//-3		year>0
+	//3.5		Math.floor(year)
+	//OK		//""  	year>0
+	//cancel	//null 	year>0
+	//abc		Math.floor(year)
+	
+	/*
+	公元年份非4的倍數，為365天平年。				year%4==0
+	公元年份為4的倍數但非100的倍數，為366天閏年。		year%100!=0
+	公元年份為100的倍數但非400的倍數，為平年。		year%400==0
+	公元年份為400的倍數但非4000但倍數，為閏年。		year%4000!=0
+	公元年份為4000的倍數為平年。
+	*/
+	//平年 閏年
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

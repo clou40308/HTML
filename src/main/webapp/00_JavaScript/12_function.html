@@ -1,0 +1,88 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0059)http://10.0.1.21:5050/webapp/00_JavaScript/12_function.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>JavaScript</title>
+	<style type="text/css">
+	</style>
+	<script type="text/javascript">
+		/*
+		var a = 3;
+		document.write("a="+a+"<br>");
+		function hello(){
+			document.write("Hello"+"<br>");
+		}
+		hello();
+		*/
+		
+		/*
+		function hello(name, time){
+			document.write("Hello "+name+", "+time+"<br>");
+		}
+		hello("Mary","morning");
+		hello("Tony","evening");
+		hello("Ken",123);
+		hello("Tony","evening",123);
+		hello("Mary");
+		*/
+		
+		/*
+		function hello(){
+			document.write("Hello"+"<br>");
+		}
+		*/
+		
+		/*
+		function hello(){
+			document.write("Hello 1"+"<br>");
+			//return;
+			document.write("Hello 2"+"<br>");
+			//return "world!";
+			document.write("Hello 3"+"<br>");
+			//return undefined;//default
+		}
+		var back = hello();
+		document.write("back="+back+"<br>");
+		*/
+		
+		/*
+		function add(a,b){
+			var c = a + b;
+			return c;
+		}
+		var back = add(3,4);
+		document.write("back="+back+"<br>");
+		back = add(2,4);
+		document.write("back="+back+"<br>");
+		*/
+		
+		var mainStr = "Main string";//global variable
+		document.write("Main call mainStr: "+mainStr+"<br>");
+		function fun1(){
+			var funStr = "Fun1 string";//local variable
+			document.write("fun1 call mainStr: "+mainStr+"<br>");
+			var mainStr = "Fun1 modified!";//local variable
+			document.write("fun1 call mainStr: "+mainStr+"<br>");
+			document.write("fun1 call funStr: "+funStr+"<br>");
+		}
+		fun1();
+		function fun2(){
+			//var funStr = "Fun2 string";//local variable
+			document.write("fun2 call mainStr: "+mainStr+"<br>");
+			//document.write("fun2 call funStr: "+funStr+"<br>");//NO
+		}
+		fun2();
+
+		//document.write("Main call funStr: "+funStr+"<br>");//NO
+		
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

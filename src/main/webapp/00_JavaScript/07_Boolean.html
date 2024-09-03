@@ -1,0 +1,53 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0058)http://10.0.1.21:5050/webapp/00_JavaScript/07_Boolean.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>JavaScript</title>
+	<style type="text/css">
+	</style>
+	<script type="text/javascript">
+		var a = true;//boolean
+		a = false;//false
+		a = !false;//! not true
+
+		a = Boolean(1);//true
+		a = Boolean(-1);//true
+		a = Boolean(0);//false
+		a = Boolean(NaN);//false
+
+		a = Boolean("abc");//true
+		a = Boolean(" ");//true
+		a = Boolean("");//false
+
+		a = Boolean(null);//false
+		a = Boolean(undefined);//false
+
+		a = Boolean({});//true
+		a = Boolean([]);//true
+
+		//< <= == === !== != >= >
+		a = 3 < 4;//true
+		a = 3 > 4;//false
+
+		document.write("a=" + typeof (a) + "<br>");
+		document.write("a=" + a + "<br>");
+
+		var x = 5;
+		var y = "5";
+
+		document.write((x == Number(y)) + "<br>");//true
+		document.write((x == y) + "<br>");//true
+		document.write((x != y) + "<br>");//false
+		document.write((x === y) + "<br>");//false
+		document.write((x !== y) + "<br>");//true
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>
