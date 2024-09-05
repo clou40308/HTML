@@ -1,0 +1,29 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>JavaScript</title>
+	<style type="text/css">
+	</style>
+	<script type="text/javascript" src="../jquery.js"></script>
+	<script type="text/javascript">
+		//document.getElementById("myBtn").addEventListener("click", clickHandler);
+		//jQuery("#myBtn").click(clickHandler);
+		
+		//$("target").jQueryFunction(inputValue);		
+
+		$(document).ready(init);
+		function init(){
+			$("#myBtn").click(clickHandler);		
+		}
+		function clickHandler(e){//event
+			//alert(clickHandler);
+			alert("Clicked!");
+		}
+	</script>
+</head>
+<body>
+	<button id="myBtn">Click me!</button>
+	</body>
+</html>

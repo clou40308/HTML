@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,25 +7,42 @@
 <link type="text/css" rel="stylesheet" href="styles/default.css" />
 <script type="text/javascript" src="../jquery.js"></script>
 <script type="text/javascript">
-$(document).ready(init);
-function init()
-{
-	//Your Code Here !!
-}
-</script>  
+	$(document).ready(init);
+	function init() {
+		$("#aniBanner").click(inOutHandler);
+		//$(".showin-button").click(inHandler);
+		//$(".showout-button").click(outHandler);
+	}
+	function inHandler(){
+		$("#aniBanner").animate({left:"0px"},300);
+	}
+	function outHandler(){
+		$("#aniBanner").animate({left:"-170px"},300);
+	}
+	var flag = true;
+	function inOutHandler(){
+		if(flag){
+			$("#aniBanner").animate({left:"0px"},300);
+		}else{
+			$("#aniBanner").animate({left:"-170px"},300);
+		}
+		flag = !flag;
+	}
+	//left:-170px;
+</script>
 </head>
 
 <body>
-<div id="aniBanner">
-  <div class="left-side">
-    <div class="prod-img"></div>
-    <h1>Creative Suite 5 Web
-      Premium</h1>
-    <p>Redefine the extraordinary 
-      in web design and 
-      development.</p>
-  </div>
-  <div class="right-side"> <a class="showin-button">banner in</a> <a class="showout-button">banner out</a> </div>
-</div>
+	<div id="aniBanner">
+		<div class="left-side">
+			<div class="prod-img"></div>
+			<h1>Creative Suite 5 Web Premium</h1>
+			<p>Redefine the extraordinary in web design and development.</p>
+		</div>
+		<div class="right-side">
+			<a class="showin-button">banner in</a>
+			<a class="showout-button">banner out</a>
+		</div>
+	</div>
 </body>
 </html>

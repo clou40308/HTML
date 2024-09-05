@@ -19,6 +19,7 @@
             border: 1px dotted gray;
             background: #da9999;
             padding: 10px;
+            /*display: none;*/
         }
 
         .main {
@@ -35,46 +36,21 @@
         function init() {
             $("#hide").click(hideHandler);
             $("#show").click(showHandler);
-            $("#toggle").click(toggleHandler);
         }
         function hideHandler() {
-            //$("#demo").hide();		
-            $("#demo").hide("slow");//0.6s	
-            //$("#demo").hide(1000);//1000ms = 1s	
-            //$("#demo").hide(2000, callbackFun);
-
-            //$("#demo").slideUp("slow");
-            //$("#demo").fadeOut("slow");
+            $("#demo").hide();
         }
         function showHandler() {
-            //$("#demo").show();		
-            //$("#demo").show("fast");//0.4s	
-            //$("#demo").show(400);//400ms = 0.4s	
-
-            $("#demo").slideDown(1200);
-            //$("#demo").fadeIn("slow");
-        }
-        function toggleHandler() {
-            //$("#demo").toggle();		
-            //$("#demo").toggle("normal");//0.5s	
-            //$("#demo").toggle(1500);//1500ms = 1.5s	
-
-            //$("#demo").slideToggle(300);
-            $("#demo").fadeToggle(1000);
-        }
-        function callbackFun() {
-            //alert("End!");
-            console.log("End!");
+            $("#demo").show();
         }
     </script>
 </head>
 
 <body>
     <div class="main">
-        <button id="show">Show Me</button>
-        <button id="hide">Hide Me</button>
-        <button id="toggle">Toggle</button>
-        <div id="demo"> 你好嗎? welcome!! </div>
+        <button id="show">More Info</button>
+
+        <div id="demo"> <button id="hide">X</button> 你好嗎? welcome!! </div>
     </div>
 </body>
 

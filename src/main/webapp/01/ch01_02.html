@@ -33,7 +33,26 @@
         }
     </style>
     <script type="text/javascript" src="../jquery.js"></script>
-    <!-- write code here-->
+    <script type="text/javascript">
+		//$("target").jQueryFunction(inputValue);
+		$(document).ready(init);		
+		function init(){
+			$("#show").click(showHandler);
+			$("#reset").click(resetHandler);
+		}
+		function showHandler(){
+			//$("#demo").fadeTo("slow",0.4);
+			$("#demo").fadeTo(1200,0.4);
+			//$("#demo").fadeTo(1200,0.4, callback);
+		}
+		function resetHandler(){
+			$("#demo").fadeTo(200, 1);
+		}
+		function callback(){
+			alert("end!");
+		}
+    </script>
+    
 </head>
 <body>
 

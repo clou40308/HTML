@@ -22,7 +22,25 @@ button{
 $(document).ready(init);
 function init()
 {
-	//Your Code Here !!
+	//$("#myshow").animate({"width":"90%", height:"200px","fontSize":"10em",opacity:0.3},800);
+	$("#show").click(showHandler);
+}
+function showHandler(){
+	//$("#myshow").animate({"width":"90%", height:"200px"},800);
+	//$("#myshow").animate({"fontSize":"10em"},1200);
+	//$("#myshow").animate({opacity:0.3},400);
+	
+	
+	$("#myshow").animate({"width":"90%", height:"200px"},800)
+				.animate({"fontSize":"10em"},1200)
+				.animate({opacity:0.3},400);
+	//chain
+	/*
+	var obj =$("#myshow");
+	obj.animate({"width":"90%", height:"200px"},800);
+	obj.animate({"fontSize":"10em"},1200);
+	obj.animate({opacity:0.3},400);
+	*/
 }
 </script>  
 </head>

@@ -1,5 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title>jQuery Position</title>
@@ -9,14 +11,15 @@
             margin: 0;
             padding: 0;
             font: 12px / 1.5 Arial, Georgia, Times, "Times New Roman", serif;
+            background: pink;
         }
-        
+
         .main {
             width: 800px;
             margin: 0 auto;
             margin-top: 100px;
         }
-        
+
         #demo {
             width: 300px;
             height: 500px;
@@ -26,35 +29,57 @@
             padding: 10px;
             padding-left: 20px;
         }
-        
+
         button {
             font: 14px / 1.5 Arial, Georgia, Times, "Times New Roman", serif;
         }
     </style>
 
     <script type="text/javascript" src="../jquery.js"></script>
-	<script type="text/javascript">
-	$(document).ready(init);
-	function init()
-	{
-		//Your Code Here !!
-	}
-	</script>  
+    <script type="text/javascript">
+        $(document).ready(init);
+        function init() {
+            $("button").click(checkHandler);
+        }
+        function checkHandler() {
+            //alert($("#demo").css("width"));//300px
+            //alert($("#demo").css("height"));//500px
+            //alert($("#demo").width());//300
+            //alert($("#demo").height());//500
+
+            //alert($(window).css("width"));//NO
+            //alert($(window).width());//OK window / document
+            //alert($(window).height());//OK
+
+            //$("#demo").css("width","400px");
+            //$("#demo").css("height","400px");
+            //$("#demo").width(400);
+            //$("#demo").height(400);
+
+            //==================================
+            var imgOffest = $("#demo img").offset();//left: 21 top: 258.234375
+            //alert("left: "+imgOffest.left +" top: "+imgOffest.top);
+            $("#demo img").offset({ left: 30, top: 50 });
+        }
+
+    </script>
 </head>
+
 <body>
 
     <div class="main">
         <h1>Position</h1>
-        
-            <button>
-                 Check Position
-            </button><br/>
-            
-            
+
+        <button>
+            Check Position
+        </button><br />
+
+
         <div id="demo">
             <h1>Position Demo</h1>
-            <img src="../images/bread.jpg" alt="bread"/>
+            <img src="../images/bread.jpg" alt="bread" />
         </div>
     </div>
 </body>
+
 </html>
