@@ -1,48 +1,71 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <title>blur()</title>
 
-        <style type="text/css">
-            body {
-                margin: 0;
-                padding: 0;
-                font: 12px / 5 Arial, Georgia, Times, "Times New Roman", serif;
-            }
-            
-            .main {
-                background-color: green;
-                color: white;
-                width: 300px;
-                font: 90% Verdana;
-                margin: 0 auto;
-                margin-top: 100px;
-                padding: 20px;
-            }
-            
-            input {
-                font: 12px / 1.5 Arial, Georgia, Times, "Times New Roman", serif;
-            }
-        </style>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>blur()</title>
 
-        <script type="text/javascript" src="../jquery.js"></script>
-		<script type="text/javascript">
-		$(document).ready(init);
-		function init()
-		{
-			//Your Code Here !!
-		}
-		</script>  
-    </head>
-    <body>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font: 12px / 5 Arial, Georgia, Times, "Times New Roman", serif;
+        }
 
-        <div class="main">
-            姓名:<input type="text" name="name" size="20"/>
-            <br/>
-            暱稱:<input type="text" name="nick" size="20"/>
-            <br/>
-            <span id="dis"></span>
-        </div>
-    </body>
+        .main {
+            background-color: green;
+            color: white;
+            width: 300px;
+            font: 90% Verdana;
+            margin: 0 auto;
+            margin-top: 100px;
+            padding: 20px;
+        }
+
+        input {
+            font: 12px / 1.5 Arial, Georgia, Times, "Times New Roman", serif;
+        }
+    </style>
+
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(init);
+        function init() {
+            //$(".main :text").focus(runHandler);
+            //$(".main :text").blur(runHandler);
+            $(".main :text").change(runHandler);
+
+            $("#units").change(calcHandler);
+        }
+
+        function calcHandler() {
+            var price = $("#price").text();
+            var units = $("#units").val();
+            //alert(typeof(units));//string
+            $("#subtotal").text(price * units);
+        }
+
+        function runHandler() {
+            var msg = $(this).attr("name") + " / " + $(this).val();
+            //console.log(msg);
+            $("#dis").text(msg);
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="main">
+        姓名:<input type="text" name="name" size="20" />
+        <br />
+        暱稱:<input type="text" name="nick" size="20" />
+        <br />
+        <span id="dis"></span>
+    </div>
+    <hr>
+    Apple:<span id="price">50</span>
+    Units:<input type="number" value="0" id="units" min="0" max="10">
+    Subtotal:<span id="subtotal">0</span>
+</body>
+
 </html>

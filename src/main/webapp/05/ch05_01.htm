@@ -1,28 +1,44 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery Filter</title>
-<style type="text/css">
-div{
-	width:100px;
-	height:50px;
-	border:1px solid gray;
-	padding:10px;
-	background:#666;
-	color:white;
-}
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>jQuery Filter</title>
+	<style type="text/css">
+		div {
+			width: 100px;
+			height: 50px;
+			border: 1px solid gray;
+			padding: 10px;
+			background: #666;
+			color: white;
+		}
+	</style>
 
-</style>
+	<script type="text/javascript" src="../jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(init);
+		function init() {
+			//alert($("#target").length);//1
+			//alert($("div").length);//5
+			//alert($("#abc").length);//0
 
-<script type="text/javascript" src="../jquery.js"></script>
-<script type="text/javascript">
-$(document).ready(init);
-function init()
-{
-	//Your Code Here !!
-}
-</script>  
+			//alert(document.getElementById("target"));// HTMLDivElement
+			//alert($("#target"));//array
+
+			//alert(document.getElementById("target").innerHTML);// This is a div2
+			//alert($("#target").html());// This is a div2
+
+			//alert(document.getElementById("target").html());//NO
+			//alert($("#target").innerHTML);// undefined //NO
+
+			//alert($("#target")[0]);//HTMLDivElement
+			//alert($("#target")[0].innerHTML);//This is a div2
+			//alert($(document.getElementById("target")).html());//This is a div2
+			alert($("div")[1].innerHTML);//This is a div2
+		}
+	</script>
 </head>
 
 <body>
@@ -32,4 +48,5 @@ function init()
 	<div>This is a div4</div>
 	<div>This is a div5</div>
 </body>
+
 </html>

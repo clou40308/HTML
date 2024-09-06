@@ -1,86 +1,117 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <title>scroll</title>
-       
-        <style type="text/css">
-            html {
-                color: white;
-                background-color: #2f2a3e;
-                font: normal 76% "Arial", "Trebuchet MS", "Lucida Grande", Verdana, Sans-Serif;
-            }
-            
-        </style>
 
-        <script type="text/javascript" src="../jquery.js"></script>
-		<script type="text/javascript">
-		$(document).ready(init);
-		function init()
-		{
-			//Your Code Here !!
-		}
-		</script>  
-    </head>
-    <body>
-        name:<input type="text" size="20"/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-    </body>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>scroll</title>
+
+    <style type="text/css">
+        html {
+            color: white;
+            background-color: #2f2a3e;
+            font: normal 76% "Arial", "Trebuchet MS", "Lucida Grande", Verdana, Sans-Serif;
+        }
+
+        #myText {
+            position: fixed;
+            width: 400px;
+        }
+
+        #myDiv {
+            width: 0px;
+            height: 20px;
+            position: fixed;
+            left: 0px;
+            top: 50px;
+            background: orange;
+        }
+
+        .testDiv {
+            background: pink;
+            border: 1px solid gray;
+            height: 500px;
+            font-size: 5em;
+            text-align: center;
+        }
+    </style>
+
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(init);
+        function init() {
+            $(window).scroll(scrollHandler);
+        }
+        var index = 0;
+        function scrollHandler() {
+            var scrollDist = $(window).scrollTop();// $(window).scrollLeft()
+            var winH = $(window).height();
+            var docH = $(document).height();
+            var different = docH - winH;
+            var percent = Math.round(scrollDist / different * 100);
+            $(":text").val(" w:" + winH + " d:" + docH + " -:" + different + " s:" + scrollDist + "p:" + percent + "%");
+            $("#myDiv").css("width", percent + "%");
+
+            if (percent == 90) {
+                index++
+                $("body").append("<div class='testDiv'>" + index + "</div>")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="myDiv"></div>
+    name:<input type="text" size="20" id="myText" />
+    <br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr />
+    <br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr /><br />
+    <hr />
+</body>
+
 </html>
